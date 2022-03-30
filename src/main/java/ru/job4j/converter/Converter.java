@@ -11,10 +11,22 @@ public class Converter {
         return rsl;
     }
 
+    public static boolean test(float value, String currency) {
+        if (currency.equals("euro")) {
+            float euro = Converter.rubleToEuro(value);
+            float expected = 2;
+            return expected == euro;
+        }
+        if (currency.equals("dollar")) {
+            float dollar = Converter.rubleToDollar(value);
+            float expected = 10;
+            return expected == dollar;
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
-        float euro = Converter.rubleToEuro(140);
-        System.out.println("140 rubles are " + euro + " euro.");
-        float dollar = Converter.rubleToDollar(1000);
-        System.out.println("1000 rubles are " + dollar + " dollars.");
+        System.out.println("140 rubles are 2 euro. Test result : " + test(140, "euro"));
+        System.out.println("600 rubles are 10 dollars. Test result : " + test(600, "dollar"));
     }
 }
