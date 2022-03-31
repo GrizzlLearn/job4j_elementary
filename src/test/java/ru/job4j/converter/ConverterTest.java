@@ -52,4 +52,5 @@ public class ConverterTest {
         String currency = "dollar";
         Assert.assertFalse(Converter.test(in, currency));
     }
+
 }
