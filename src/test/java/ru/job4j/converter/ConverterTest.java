@@ -29,35 +29,27 @@ public class ConverterTest {
     public void whenTestValueEqual140AndCurrencyEqualEuroThenResultIsTrue() {
         float in = 140;
         String currency = "euro";
-        boolean expected = true;
-        boolean out = Converter.test(in, currency);
-        Assert.assertEquals(expected, out);
+        Assert.assertTrue(Converter.test(in, currency));
     }
 
     @Test
     public void whenTestValueEqual1400AndCurrencyEqualEuroThenResultIsFalse() {
         float in = 1400;
         String currency = "euro";
-        boolean expected = false;
-        boolean out = Converter.test(in, currency);
-        Assert.assertEquals(expected, out);
+        Assert.assertFalse(Converter.test(in, currency));
     }
 
     @Test
     public void whenTestValueEqual600AndCurrencyEqualDollarThenResultIsTrue() {
         float in = 600;
         String currency = "dollar";
-        boolean expected = true;
-        boolean out = Converter.test(in, currency);
-        Assert.assertEquals(expected, out);
+        Assert.assertTrue(Converter.test(in, currency));
     }
 
     @Test
     public void whenTestValueEqual6000AndCurrencyEqualDollarThenResultIsFalse() {
         float in = 6000;
         String currency = "dollar";
-        boolean expected = false;
-        boolean out = Converter.test(in, currency);
-        Assert.assertEquals(expected, out);
+        Assert.assertFalse(Converter.test(in, currency));
     }
 }
