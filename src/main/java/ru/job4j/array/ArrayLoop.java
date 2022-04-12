@@ -6,8 +6,10 @@ public class ArrayLoop {
         for (int i = 0; i < massive.length; i++) {
             massive[i] = i * 2 + 3;
         }
-        for (int i = 0; i < massive.length; i++) {
-            System.out.println("Значение элемента " + i + ": " + massive[i]);
+        int index = 0;
+        for (int num : massive) {
+            System.out.println("Значение элемента " + index + ": " + num);
+            index++;
         }
     }
 }
